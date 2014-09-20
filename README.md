@@ -1,4 +1,4 @@
-# power-assert-demo
+# power-assert-demo [![Build Status](https://travis-ci.org/azu/power-assert-demo.svg?branch=master)](https://travis-ci.org/azu/power-assert-demo)
 
 Try power-assert in your browser.
 

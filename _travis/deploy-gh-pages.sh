@@ -23,4 +23,4 @@ echo "MESSAGE :" $lastCommit
 
 git add .
 git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
-git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+git push --force --quiet "$REPO_URL" master:gh-pages > /dev/null 2>&1

@@ -16,8 +16,12 @@ var ractive = new Ractive({
         "mocha-runner": require("./component/runner/mocha-runner-component")
     }
 });
-document.getElementById("js-convert-button").addEventListener("click", function () {
+function execScript() {
     // message to component
-    var jsEditor = ractive.findComponent("jsEditor");
-    jsEditor.fire("convert-js");
+    var runner = ractive.findComponent("mocha-runner");
+    runner.runTest();
+}
+ractive.findComponent("jsEditor").on({
+    "execScript": execScript
 });
+document.getElementById("js-convert-button").addEventListener("click", execScript);

@@ -2,9 +2,9 @@
 var Ractive = require("ractive");
 module.exports = Ractive.extend({
     data: {
-        "userScript": "",// from parent
-        codeMirror: null
+        "userScript": ""// from parent
     },
+    template: require("fs").readFileSync(__filename + ".hbs", "utf-8"),
     init: function () {
         var ractive = this;
 
@@ -23,20 +23,23 @@ module.exports = Ractive.extend({
         if (ractive.data.userScript) {
             myCodeMirror.setValue(ractive.data.userScript);
         }
+        myCodeMirror.on('change', function (cm) {
+            saveEditContent(cm.getValue());
+        });
         myCodeMirror.addKeyMap({
             "Ctrl-Enter": function (cm) {
                 saveEditContent(cm.getValue());
+                ractive.execScript();
             },
             "Cmd-Enter": function (cm) {
                 saveEditContent(cm.getValue());
+                ractive.execScript();
             }
         });
-        ractive.set("codeMirror", myCodeMirror);
-        // receive message from other
-        ractive.on("convert-js", function () {
-            saveEditContent(myCodeMirror.getValue());
-        });
     },
-    template: require("fs").readFileSync(__filename + ".hbs", "utf-8")
+    execScript: function () {
+        // fire event caught by index
+        this.fire("execScript");
+    }
 });
 

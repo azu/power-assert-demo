@@ -1,22 +1,13 @@
 "use strict";
 var Ractive = require("ractive");
-var fs = require("fs");
-var espowerSource = require("espower-source");
-var runnerHTML = fs.readFileSync(__dirname + "/embed-runner.hbs", "utf-8");
+var convertEmbedCode = require("./convert-embed-code");
 module.exports = Ractive.extend({
     template: require("fs").readFileSync(__filename + ".hbs", "utf-8"),
     data: {
         userScript: "",
-        // create embed html for SrcDoc
-        embed: function (str) {
-            var source;
-            try{
-                source = espowerSource(str);
-            }catch(e){
-                console.log(e);
-                alert(e);
-            }
-            return runnerHTML.replace("{{embed-script}}", source);
-        }
+        execScript: ""
+    },
+    runTest: function () {
+        this.set("execScript", convertEmbedCode(this.get("userScript")));
     }
 });

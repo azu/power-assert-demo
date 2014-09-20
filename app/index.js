@@ -25,3 +25,6 @@ ractive.findComponent("jsEditor").on({
     "execScript": execScript
 });
 document.getElementById("js-convert-button").addEventListener("click", execScript);
+window.addEventListener("load", function () {
+    execScript();
+});

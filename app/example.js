@@ -13,3 +13,11 @@ describe('Array', function () {
         });
     });
 });
+
+describe('String.slice()', function () {
+    it('extracts a section of a string and returns a new string', function () {
+        var str1 = "The morning is upon us.";
+        var str2 = str1.slice(4, -2);
+        assert(str1 === str2);
+    });
+});

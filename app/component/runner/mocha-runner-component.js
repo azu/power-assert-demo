@@ -9,7 +9,13 @@ module.exports = Ractive.extend({
         userScript: "",
         // create embed html for SrcDoc
         embed: function (str) {
-            var source = espowerSource(str);
+            var source;
+            try{
+                source = espowerSource(str);
+            }catch(e){
+                console.log(e);
+                alert(e);
+            }
             return runnerHTML.replace("{{embed-script}}", source);
         }
     }

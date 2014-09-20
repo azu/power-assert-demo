@@ -8,7 +8,6 @@ echo "This is not a deployable branch.";
   exit 0;
 fi
 
-
 echo "BUMP HELLO WORLD set up $GH_REPO [via travis] for $GIT_NAME <${GIT_EMAIL}>"
 export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
 git config user.name "Travis-CI"
@@ -25,4 +24,7 @@ git add .
 git add -f build/
 git add -f bower_components/
 git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
+
+echo "=PUSH STATUS="
+git status
 git push --force --quiet "$REPO_URL" master:gh-pages > /dev/null 2>&1

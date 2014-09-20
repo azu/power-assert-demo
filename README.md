@@ -4,9 +4,14 @@ Try [power-assert](https://github.com/twada/power-assert "power-assert") in your
 
 DEMO: http://azu.github.io/power-assert-demo
 
+[![img](http://monosnap.com/image/abZWIEqxlpWsWev1oPP03DxNvdsOId.png)](http://azu.github.io/power-assert-demo)
+
 ## Usage
 
-You can write test.
+You can write test with [power-assert](https://github.com/twada/power-assert "power-assert").
+
+[power-assert](https://github.com/twada/power-assert "power-assert") API equal to [Node.js assert module](http://nodejs.org/api/assert.html "Assert Node.js Manual &amp; Documentation"),
+but it's has very-meaningful results.
 
 ``` js
 describe('Array', function(){

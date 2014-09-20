@@ -1,6 +1,6 @@
 # power-assert-demo [![Build Status](https://travis-ci.org/azu/power-assert-demo.svg?branch=master)](https://travis-ci.org/azu/power-assert-demo)
 
-Try power-assert in your browser.
+Try [power-assert](https://github.com/twada/power-assert "power-assert") in your browser.
 
 DEMO: http://azu.github.io/power-assert-demo
 

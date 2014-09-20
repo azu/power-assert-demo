@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - '0.10'
+before_script:
+- npm install
+- npm -g install bower
+- bower install
 script: npm run build
 after_success:
 - ./_travis/deploy-gh-pages.sh

@@ -22,5 +22,7 @@ echo "=COMMIT="
 echo "MESSAGE :" $lastCommit
 
 git add .
+git add -f build/
+git add -f bower_components/
 git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
 git push --force --quiet "$REPO_URL" master:gh-pages > /dev/null 2>&1

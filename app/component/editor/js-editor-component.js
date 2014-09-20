@@ -31,6 +31,7 @@ module.exports = Ractive.extend({
             }
         });
         ractive.set("codeMirror", myCodeMirror);
+        // receive message from other
         ractive.on("convert-js", function () {
             saveEditContent(myCodeMirror.getValue());
         });

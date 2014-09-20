@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '0.10'
+script: npm run build
+after_success:
+- ./_travis/deploy-gh-pages.sh
+env:
+  global:
+    - GH_REPO="azu/power-assert-demo"
+    - secure: Wmjn856BockDf9hO5yQKGK3yWLiY5VrLiAw0nMwEL2CoISqiBEcjJsLdOrE+GJT8Y69nQprnAszxtxkrgKuDHOgbZTl/ZQBOWUWUfPxTjIf7p6LM106c5F7ltMfd3BfsNAQhYX2hHMWm3QQAJayOqI1KaQ/5n8ulfXUGdYDuvFI=

@@ -1,0 +1,19 @@
+{
+  "name": "power-assert-demo",
+  "version": "0.0.0",
+  "authors": [
+    "azu <azuciao@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "power-assert": "~0.9.0",
+    "mocha": "~1.21.4"
+  }
+}

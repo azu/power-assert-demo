@@ -1,0 +1,38 @@
+{
+  "name": "power-assert-demo",
+  "description": "power-assert demo on the web.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/azu/power-assert-demo/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/power-assert-demo.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t brfs app/index.js -o build/app.js",
+    "watch": "watchify -d -v -t brfs app/index.js -o build/app.js",
+    "test": "mocha test/*.js"
+  },
+  "directories": {
+    "test": "test/"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azu/power-assert-demo/issues"
+  },
+  "dependencies": {
+    "codemirror": "^4.6.0",
+    "escodegen": "^1.4.1",
+    "espower": "^0.9.1",
+    "espower-source": "^0.9.1",
+    "esprima": "^1.2.2",
+    "iframe": "^0.2.0",
+    "ractive": "^0.5.8"
+  },
+  "devDependencies": {
+    "brfs": "^1.2.0",
+    "browserify": "^5.12.0",
+    "watchify": "^1.0.2"
+  }
+}

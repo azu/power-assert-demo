@@ -48,3 +48,7 @@ html, body {
     left: 40%;
     bottom: 0;
     right: 0; }
+
+.CodeMirror {
+    font-size: 16px;
+}

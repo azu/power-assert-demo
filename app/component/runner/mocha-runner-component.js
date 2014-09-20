@@ -5,9 +5,9 @@ module.exports = Ractive.extend({
     template: require("fs").readFileSync(__filename + ".hbs", "utf-8"),
     data: {
         userScript: "",
-        execScript: ""
+        executableScript: ""
     },
     runTest: function () {
-        this.set("execScript", convertEmbedCode(this.get("userScript")));
+        this.set("executableScript", convertEmbedCode(this.get("userScript")));
     }
 });

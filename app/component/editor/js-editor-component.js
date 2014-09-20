@@ -16,6 +16,7 @@ module.exports = Ractive.extend({
         var myCodeMirror = CodeMirror.fromTextArea(placeholder, {
             mode: "javascript",
             lineNumbers: true,
+            lineWrapping: true,
             styleActiveLine: true,
             matchBrackets: true
         });

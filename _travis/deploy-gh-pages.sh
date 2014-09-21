@@ -12,6 +12,9 @@ echo "BUMP HELLO WORLD set up $GH_REPO [via travis] for $GIT_NAME <${GIT_EMAIL}>
 export REPO_URL="https://$GH_TOKEN@github.com/$GH_REPO.git"
 git config user.name "Travis-CI"
 git config user.email "travis@travis-ci.org"
+
+# Git
+git checkout -b gh-pages
 lastCommit=$(git log --oneline | head -n 1)
 
 echo "=STATUS="
@@ -27,4 +30,4 @@ git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
 
 echo "=PUSH STATUS="
 git status
-git push --force --quiet "$REPO_URL" master:gh-pages > /dev/null 2>&1
+git push --force --quiet "$REPO_URL" origin gh-pages > /dev/null 2>&1

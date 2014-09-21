@@ -6,8 +6,8 @@ before_script:
 - bower install
 script: npm run build
 after_success:
-- ./_travis/deploy-gh-pages.sh
+- "./_travis/deploy-gh-pages.sh"
 env:
   global:
-    - GH_REPO="azu/power-assert-demo"
-    - secure: Wmjn856BockDf9hO5yQKGK3yWLiY5VrLiAw0nMwEL2CoISqiBEcjJsLdOrE+GJT8Y69nQprnAszxtxkrgKuDHOgbZTl/ZQBOWUWUfPxTjIf7p6LM106c5F7ltMfd3BfsNAQhYX2hHMWm3QQAJayOqI1KaQ/5n8ulfXUGdYDuvFI=
+  - GH_REPO="azu/power-assert-demo"
+  - secure: aDtR7a39wdjwxlB3kEruzNSpzfUMk+aqpOVaS5yAXkv+TTdr1qKOyNQd7OlNr5nVROTG2OXyGXvcQvyCdNztpI4CV4mMxe/zauo6VMXPe2KxunGxkOPYFOkwAHvOw5a4gpqXIxJG+qFkZ9Ykmvb5Z1X2GLfH5Sd2BCFXUM9izl8=

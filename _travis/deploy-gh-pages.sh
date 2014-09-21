@@ -30,4 +30,4 @@ git commit -q -m "Travis build $TRAVIS_BUILD_NUMBER"
 
 echo "=PUSH STATUS="
 git status
-git push --force --quiet "$REPO_URL" origin gh-pages > /dev/null 2>&1
+git push --force --quiet "$REPO_URL" gh-pages > /dev/null 2>&1

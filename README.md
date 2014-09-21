@@ -36,6 +36,12 @@ Run the test code :
 - mac: ⌘-return
 - windows: ctrl-enter
 
+## Browser Support
+
+It's depend on iframes'`srcdoc`.
+
+- [iframe\[srcdoc\] attribute](http://www.chromestatus.com/features/5222955109842944 "Chromium Dashboard")
+
 ## Contributing
 
 1. Fork it!

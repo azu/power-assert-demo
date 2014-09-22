@@ -38,7 +38,7 @@ Run the test code :
 
 ## Browser Support
 
-It's depend on iframes'`srcdoc`.
+It's depend on iframe's`srcdoc`.
 
 - [iframe\[srcdoc\] attribute](http://www.chromestatus.com/features/5222955109842944 "Chromium Dashboard")
 

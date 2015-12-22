@@ -22,7 +22,7 @@
     "url": "https://github.com/azu/power-assert-demo/issues"
   },
   "dependencies": {
-    "espower-source": "^0.9.1",
+    "espower-source": "^1.0.0",
     "ractive": "^0.6.0"
   },
   "devDependencies": {
